@@ -110,20 +110,20 @@ function logRequest(url, requestData, requestHeaders) {
 
 function orderFristi() {
     mgr.getUser().then(function (user) {
-        sendRequest(settings.api_bar_uri, user.access_token, { DrinkName: "Fristi", age: user.profile.age }, log);
+        sendRequest(settings.api_bar_uri, user.access_token, { DrinkName: "Fristi" }, log);
     });
 }
 
 function orderBeer() {
     mgr.getUser().then(function (user) {
 
-        sendRequest(settings.api_bar_uri, user.access_token, { DrinkName: "Beer", age: user.profile.age }, log);
+        sendRequest(settings.api_bar_uri, user.access_token, { DrinkName: "Beer"}, log);
     });
 }
 
 function manageDrinks() {
     mgr.getUser().then(function (user) {
-        sendRequest(settings.api_manageBar_uri, user.access_token, { DrinkName: "Whiskey", Role: user.profile.role[0] }, log);
+        sendRequest(settings.api_manageBar_uri, user.access_token, { DrinkName: "Whiskey" }, log);
     });
 }
 
